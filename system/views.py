@@ -88,7 +88,7 @@ class ContentView(APIView):
         serializer = UpdateSerializer(instance=obj, data=data)
         if serializer.is_valid():
             serializer.save()
-            return HttpResponse('Content updated')
+        return HttpResponse('Content updated')
 
 
     def delete(self, request):
